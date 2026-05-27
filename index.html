@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kody Bousher // HOME</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<script src="script.js"></script>
+<body>
+
+    <div class="grid-overlay"></div>
+    <div class="custom-cursor" id="cursor"></div>
+
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="active">HOME</a>
+            <a href="work.html">WORK</a>
+            <a href="about.html">ABOUT</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        
+        <section class="hero">
+    
+    <div class="hero-split-layout">
+        <div class="hero-text-side">
+            <h1 class="hero-title">KODY'S<br><span class="strike-text">PORTFOLIO</span></h1>
+            <p class="hero-subtitle"><p>Safe design is dead. I’m an 18-year-old designer tearing down predictable, corporate looks to find something raw and real. My style sits right at the intersection of artistic rebellion and smart brand strategy—think high-contrast imagery, distorted typography, and unapologetic color blocking. Whether I'm building social campaigns, packaging, or responsive web code, I create identities that actually mean something to subcultures. I don’t just design logos; I build entire visual universes for brands ready to leave a scar.</p>
+        </div>
+
+        <div class="hero-image-side">
+            <div class="profile-frame">
+                <img src="images/IMG_4148.JPG" class="profile-image" alt="Profile Blueprint">
+            </div>
+        </div>
+    </div>
+    
+    <div class="ticker-wrap">
+        <div class="ticker">
+            // NOW CREATING // UNAPOLOGETIC DESIGN // NOW CREATING  // UNAPOLOGETIC DESIGN // NOW CREATING // UNAPOLOGETIC DESIGN // NOW CREATING // UNAPOLOGETIC DESIGN // NOW CREATING // UNAPOLOGETIC DESIGN // NOW CREATING 
+        </div>
+    </div>
+</section>
+
+        <section class="portfolio-section">
+            <h2 class="section-title">MY WORK</h2>
+
+            <div class="portfolio-grid">
+
+                <article class="project-card card-perspective">
+    
+                    <div class="project-image-wrapper">
+                        <img src="images/Karate Poster-2.jpg" class="project-image" alt="Karate Poster">
+                    </div>
+                    <div class="project-info">
+                        <h3>Karate</h3>
+        
+                    </div>
+                </article>
+
+                <article class="project-card card-stacked">
+                
+                    <div class="project-image-wrapper">
+                        <img src="images/Building Design.jpg" class="project-image" alt="Growth Poster">
+                    </div>
+                    <div class="project-info">
+                        <h3>GROWTH POSTER</h3>
+                        <p>High Contrast Subject Isolation & Text Compression</p>
+                    </div>
+                </article>
+
+                <article class="project-card card-acid">
+                    <div class="project-image-wrapper">
+                        <img src="images/UNLock 2.png" class="project-image" alt="Adult Karate Poster">
+                    </div>
+                    <div class="project-info">
+                        <h3>ADULT KARATE POSTER</h3>
+                        <p>Ripped Paper Effect</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-ticker">
+            <div class="ticker-inner">
+                // RUN ARCHIVE // VIEW WORK // RUN ARCHIVE // VIEW WORK // RUN ARCHIVE // VIEW WORK // RUN ARCHIVE // VIEW WORK 
+            </div>
+        </div>
+
+        <div class="footer-content">
+            <a href="contact.html" class="cta-email">START_PROJECT</a>
+            <p class="copyright">2026 KODY BOUSHER.</p>
+        </div>
+    </footer>
+
+    <script>
+        const cursor = document.getElementById('cursor');
+        
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        const links = document.querySelectorAll('a, .project-card, .brutal-submit-btn');
+        links.forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                cursor.style.width = '40px';
+                cursor.style.height = '40px';
+                cursor.style.borderColor = 'var(--raw-red)';
+            });
+            link.addEventListener('mouseleave', () => {
+                cursor.style.width = '24px';
+                cursor.style.height = '24px';
+                cursor.style.borderColor = 'var(--acid-yellow)';
+            });
+        });
+    </script>
+</body>
+</html>
